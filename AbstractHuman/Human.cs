@@ -8,8 +8,6 @@ namespace AbstractHuman
 {
     abstract class Human
     {
-        List<Human> humans = new List<Human>();
-
         private string firstName;
         private string lastName;
 
@@ -37,6 +35,14 @@ namespace AbstractHuman
                     throw new ArgumentNullException("lastname cannot be null");
                 this.lastName = value;
             }
+        }
+        protected string ToString(string suffix)
+        {
+            StringBuilder info = new StringBuilder();
+
+            info.AppendFormat("Name: {0} {1}", this.firstName, this.lastName).AppendLine();
+            info.AppendLine(suffix).Replace(Environment.NewLine, Environment.NewLine + " ");
+            return info.ToString();
         }
     }
 }

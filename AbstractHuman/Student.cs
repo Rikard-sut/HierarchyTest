@@ -19,5 +19,9 @@ namespace AbstractHuman
             get { return this.grade; }
             set { this.grade = value; }
         }
+        public override string ToString()
+        {
+            return base.ToString("Grade: " + this.grade);
+        }
     }
 }

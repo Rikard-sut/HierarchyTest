@@ -40,6 +40,15 @@ namespace AbstractHuman
         {
            return this.weekSalary/this.workDaysInWeek /this.workHoursPerDay;
         }
+        public override string ToString()
+        {
+            StringBuilder info = new StringBuilder();
+            info.AppendLine("Weeksalary: " + this.weekSalary);
+            info.AppendLine("WorkHours per day: " + this.workHoursPerDay);
+            info.AppendLine("Workdays per week: " + this.WorkDaysInWeek);
+            info.AppendLine("Money per hour: " + this.MoneyPerHour());
+            return base.ToString(info.ToString());
+        }
 
     }
 }
