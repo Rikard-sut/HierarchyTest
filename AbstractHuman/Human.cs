@@ -13,8 +13,8 @@ namespace AbstractHuman
 
         public Human(string firstName, string lastName)
         {
-            this.firstName = FirstName;
-            this.lastName = LastName;
+            this.FirstName = firstName;
+            this.LastName = lastName;
         }
         public string FirstName
         {
@@ -42,7 +42,7 @@ namespace AbstractHuman
 
             info.AppendFormat("Name: {0} {1}", this.firstName, this.lastName).AppendLine();
             info.AppendLine(suffix).Replace(Environment.NewLine, Environment.NewLine + " ");
-            return info.ToString();
+            return info.TrimEnd().ToString();
         }
     }
 }
