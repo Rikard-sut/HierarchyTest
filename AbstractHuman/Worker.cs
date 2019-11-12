@@ -8,8 +8,11 @@ namespace AbstractHuman
 {
     class Worker : Human
     {
+        private const int defaultWorkDaysInWeek = 5;
+        
         private int weekSalary;
         private int workHoursPerDay;
+        private int workDaysInWeek;
 
         public Worker(string firstName, string lastName, int weekSalary, int workHoursPerDay) : base(firstName, lastName)
         {
@@ -28,8 +31,7 @@ namespace AbstractHuman
         }
         public double MoneyPerHour()
         {
-            double money = weekSalary / 5 / workHoursPerDay;
-            return money;
+           return this.weekSalary/this.workDaysInWeek /this.workHoursPerDay;
         }
 
     }

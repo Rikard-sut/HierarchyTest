@@ -8,6 +8,8 @@ namespace AbstractHuman
 {
     abstract class Human
     {
+        List<Human> humans = new List<Human>();
+
         private string firstName;
         private string lastName;
 

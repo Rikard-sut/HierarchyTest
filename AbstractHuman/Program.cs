@@ -10,6 +10,8 @@ namespace AbstractHuman
     {
         static void Main(string[] args)
         {
+            
+
         }
     }
 }
